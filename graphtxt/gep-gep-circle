@@ -1,0 +1,25 @@
+5 o
+6 o
+7 o
+
+11 v
+12 v
+13 v
+14 v
+15 v
+16 v
+17 v
+18 v
+
+5 addr 11 0
+6 addr 12 0
+7 addr 14 0
+11 copy 17 0
+17 copy 18 0
+18 copy 11 0
+17 gep 12 0
+12 load 13 0
+13 copy 14 0
+14 store 12 0
+12 copy 15 0
+14 gep 16 0

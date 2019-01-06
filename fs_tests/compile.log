@@ -1,0 +1,15 @@
+#################COMPILATION LOG##############
+./pcycle2.c:6:6: warning: incompatible pointer types assigning to 'int **' from 'int ***'; remove & [-Wincompatible-pointer-types]
+    a=&b;
+     ^~~
+./pcycle2.c:7:7: warning: incompatible pointer types assigning to 'int *' from 'int ***' [-Wincompatible-pointer-types]
+    *a=&c;
+      ^~~
+./pcycle2.c:8:7: warning: incompatible pointer types assigning to 'int *' from 'int ***' [-Wincompatible-pointer-types]
+    *b=&a;
+      ^~~
+3 warnings generated.
+./tt.c:5:2: warning: implicit declaration of function 'print' is invalid in C99 [-Wimplicit-function-declaration]
+        print("%d",p);
+        ^
+1 warning generated.

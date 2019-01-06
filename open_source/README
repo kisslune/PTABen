@@ -1,0 +1,117 @@
+Tips about how to build following open source programs:
+	emacs-24.3
+	sendmail-8.14.8
+	screen-4.2.1
+	wget-1.15
+
+
+
+===================
+emacs-24.3
+===================
+1. Configuration
+	cd ~/emacs-24.3
+	../configure --with-x-toolkit=no --with-xpm=no --with-jpeg=no --with-png=no --with-gif=no --with-tiff=no
+
+2. Build the bitcode file 
+	make
+
+3. A segmentation fault may occur during the compilation, but we can get some bitcode files by that time, including:
+	./lib-src/update-game-score.bc
+	./lib-src/profile.bc
+	./lib-src/ctags.bc
+	./lib-src/ebrowse.bc
+	./lib-src/movemail.bc
+	./lib-src/emacsclient.bc
+	./lib-src/test-distrib.bc
+	./lib-src/etags.bc
+	./lib-src/hexl.bc
+	./lib-src/make-docfile.bc
+	./src/temacs.bc
+
+
+
+===================
+sendmail-8.14.8
+===================
+1. Install openssl
+	sudo apt-get install libssl-dev
+
+2. Create site configuration file
+	cd ~/sendmail-8.14.8/devtools/Site
+	cp site.config.m4.sample site.config.m4
+	
+3. Modify site.config.m4 file
+  3.1 Remove PH_MAP support. Add "dnl" at the beginning of line from 36 to 39. 
+	
+	BEFORE:
+	35:		dnl ### Changes for PH_MAP support.
+	36:		APPENDDEF(`confMAPDEF',`-DPH_MAP')
+	37:		APPENDDEF(`confLIBS', `-lphclient')
+	38:		APPENDDEF(`confINCDIRS', `-I/opt/nph/include')
+	39:		APPENDDEF(`confLIBDIRS', `-L/opt/nph/lib')
+	
+	AFTER:
+	35:		dnl ### Changes for PH_MAP support.
+	36:		dnl APPENDDEF(`confMAPDEF',`-DPH_MAP')
+	37:		dnl APPENDDEF(`confLIBS', `-lphclient')
+	38:		dnl APPENDDEF(`confINCDIRS', `-I/opt/nph/include')
+	39:		dnl APPENDDEF(`confLIBDIRS', `-L/opt/nph/lib')
+
+  3.2 Change compiler support. Append following lines to the end of site.config.m4:
+	
+	define(`confCC', `/home/ysui/llvm-3.5.0/llvm-3.5.0.obj/Release+Asserts/bin/clang -flto -g')
+	APPENDDEF(`confLIBS', `-lresolv -Wl,-plugin-opt=also-emit-llvm')
+
+4. Build bitcode for sendmail
+	cd ~/sendmail-8.14.8
+	cd sendmail
+	./Build
+   The new sendmail.bc will be generated in ~/sendmail-8.14.8/obj.YOUR_OS.YOUR_PLATFORM/sendmail/
+
+5. Build bitcode for other utilities (makemap, mailstas, etc.)
+	cd ~/sendmail-8.14.8/makemap
+	./Build
+	The new makemap.bc will be generated in ~/sendmail-8.14.8/obj.YOUR_OS.YOUR_PLATFORM/makemap/. Switch to other directories and build for the utility you need.
+
+
+
+===================
+screen-4.2.1
+===================
+1. Backup system file /usr/include/x86_64-linux-gnu/sys/resource.h
+	cd /usr/include/x86_64-linux-gnu/sys
+	sudo cp resource.h resource.h.bak
+
+2. Change type of function getrlimit's first argument in resource.h
+	vim resource.h
+
+	Find and change following line:
+	BEFORE:	extern int getrlimit (__rlimit_resource_t __resource,
+ 	 AFTER: extern int getrlimit (int __resource,
+
+3. Install libpam0g-dev and add it into link option
+	sudo apt-get install libpam0g-dev
+
+4. Configuration
+	cd ~/screen-4.2.1
+	./configure LDFLAGS="-lpam"
+
+5. Build bitcode for screen after configuration
+	make
+
+6. Restore resource.h
+	cd /usr/include/x86_64-linux-gnu/sys
+	sudo mv resource.h.bak resource.h
+
+
+
+===================
+wget-1.15
+===================
+1. Configuration
+	../configure --without-ssl
+
+2. Build
+	make
+

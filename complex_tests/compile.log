@@ -1,0 +1,187 @@
+#################COMPILATION LOG##############
+./test-recursive.c:7:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-recursive.c:7:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test-recursive1.c:7:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-recursive1.c:7:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./swap-heap3.c:1:8: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+void * malloc(unsigned);
+       ^
+./swap-heap3.c:1:8: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./swap-heap4.c:1:8: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+void * malloc(unsigned);
+       ^
+./swap-heap4.c:1:8: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test-recursiveglobal.c:15:7: warning: incompatible pointer types assigning to 'char *' from 'unsigned int [10]' [-Wincompatible-pointer-types]
+    p = a;
+      ^ ~
+1 warning generated.
+./test1-path.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+./test-clone.c:2:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-clone.c:2:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-clone.c:7:5: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+    free (ptrs[idx]);
+    ^
+./test-clone.c:15:9: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+        free(a);
+        ^
+3 warnings generated.
+./test-recursion1.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-recursion1.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-recursion1.c:13:18: warning: incompatible pointer types initializing 'basestruct *' with an expression of type 'int **' [-Wincompatible-pointer-types]
+    basestruct * t1 = &(a->b);
+                 ^    ~~~~~~~
+./test-recursion1.c:16:10: warning: incompatible pointer types assigning to 'int *' from 'basestruct *' [-Wincompatible-pointer-types]
+    a->b = a;
+         ^ ~
+3 warnings generated.
+./swap-heap1.c:1:8: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+void * malloc(unsigned);
+       ^
+./swap-heap1.c:1:8: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test-linklist.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-linklist.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-linklist.c:35:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    while (t = head->next) 
+           ~~^~~~~~~~~~~~
+./test-linklist.c:35:14: note: place parentheses around the assignment to silence this warning
+    while (t = head->next) 
+             ^
+           (             )
+./test-linklist.c:35:14: note: use '==' to turn this assignment into an equality comparison
+    while (t = head->next) 
+             ^
+             ==
+./test-linklist.c:42:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main () {
+^
+./test-linklist.c:42:1: note: change return type to 'int'
+void main () {
+^~~~
+int
+3 warnings generated.
+./test-recursive2.c:7:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-recursive2.c:7:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./swap-heap2.c:1:8: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+void * malloc(unsigned);
+       ^
+./swap-heap2.c:1:8: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test-linklist1.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-linklist1.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-linklist1.c:38:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main () {
+^
+./test-linklist1.c:38:1: note: change return type to 'int'
+void main () {
+^~~~
+int
+2 warnings generated.
+./test1.c:23:5: warning: implicit declaration of function 'swap' is invalid in C99 [-Wimplicit-function-declaration]
+    swap (&p1, &p2);
+    ^
+1 warning generated.
+./test-path.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern char * malloc(int);
+              ^
+./test-path.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test3-path.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern char * malloc(int);
+              ^
+./test3-path.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./swap-heap.c:1:8: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+void * malloc(unsigned);
+       ^
+./swap-heap.c:1:8: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test4.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern char * malloc(int);
+              ^
+./test4.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
+./test-recursive0.c:8:28: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
+       struct list * tmp = malloc(sizeof(struct list));
+                           ^
+./test-recursive0.c:8:28: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+1 warning generated.
+./test.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test.c:22:11: warning: incompatible pointer types initializing 'int *' with an expression of type 'basestruct **' [-Wincompatible-pointer-types]
+    int * temp = var;
+          ^      ~~~
+./test.c:29:11: warning: incompatible pointer types passing 'extendstruct *' to parameter of type 'basestruct **' [-Wincompatible-pointer-types]
+    save (&gvar[0]);
+          ^~~~~~~~
+./test.c:20:25: note: passing argument to parameter 'var' here
+void save(basestruct ** var) {
+                        ^
+./test.c:31:18: warning: incompatible pointer types initializing 'basestruct *' with an expression of type 'int *' [-Wincompatible-pointer-types]
+    basestruct * temp = saveptr[i];
+                 ^      ~~~~~~~~~~
+4 warnings generated.
+./test-linklist2.c:1:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-linklist2.c:1:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-linklist2.c:32:18: warning: incompatible pointer types assigning to 'struct list *' from 'struct list **'; remove & [-Wincompatible-pointer-types]
+            cur  = & (cur->next);
+                 ^ ~~~~~~~~~~~~~
+./test-linklist2.c:37:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main () {
+^
+./test-linklist2.c:37:1: note: change return type to 'int'
+void main () {
+^~~~
+int
+3 warnings generated.
+./test8.c:5:4: warning: array index 10 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+   b[10] = 0;
+   ^ ~~
+./test8.c:2:4: note: array 'b' declared here
+   int b[10];
+   ^
+./test8.c:18:5: warning: array index 10 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+    a[10] = 0;
+    ^ ~~
+./test8.c:9:5: note: array 'a' declared here
+    char a[10];
+    ^
+2 warnings generated.
+./test-clone1.c:2:15: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+extern void * malloc(unsigned);
+              ^
+./test-clone1.c:2:15: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+./test-clone1.c:7:5: warning: implicit declaration of function 'free' is invalid in C99 [-Wimplicit-function-declaration]
+    free (ptrs[idx]);
+    ^
+2 warnings generated.
+./test-recursiveglobal1.c:8:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.

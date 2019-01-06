@@ -1,0 +1,12 @@
+5 o
+6 v
+7 v
+8 v
+9 v
+5 addr 6 0
+6 copy 7 0
+6 load 7 0
+7 copy 8 0
+8 copy 6 0
+8 copy 9 0
+

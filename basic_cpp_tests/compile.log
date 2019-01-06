@@ -1,0 +1,8 @@
+#################COMPILATION LOG##############
+./virtual-call-simple.cpp:5:9: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+ return "fd";
+        ^
+./virtual-call-simple.cpp:16:8: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+return "fdaf";
+       ^
+2 warnings generated.

@@ -1,0 +1,45 @@
+#################COMPILATION LOG##############
+./struct-incompab-typecast-nested.c:36:7: warning: incompatible pointer types assigning to 'struct DstStruct *' from 'struct SrcStruct *' [-Wincompatible-pointer-types]
+        pdst = psrc;
+             ^ ~~~~
+1 warning generated.
+./ptr-dereference3.c:15:4: warning: incompatible pointer types assigning to 'int ***' from 'int *' [-Wincompatible-pointer-types]
+        x = *y;
+          ^ ~~
+1 warning generated.
+./struct-assignment-nested.c:38:11: warning: array index 20 is past the end of the array (which contains 10 elements) [-Warray-bounds]
+        MAYALIAS(s2.out3.mid2[3].in1[20], &y);
+                 ^                   ~~
+./struct-assignment-nested.c:9:2: note: array 'in1' declared here
+        int* in1[10];
+        ^
+1 warning generated.
+./int2pointer.c:23:6: warning: cast to 'int *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+        q = (int*)addr + 1;
+            ^
+1 warning generated.
+./struct-nested-array3.c:36:12: warning: array index 10 is past the end of the array (which contains 5 elements) [-Warray-bounds]
+        MAYALIAS(&p->out3.mid2[10].in1[10], &s.out3.mid2[4000]);
+                  ^            ~~
+./struct-nested-array3.c:16:2: note: array 'mid2' declared here
+        struct InnerArrayStruct mid2[5];
+        ^
+./struct-nested-array3.c:36:39: warning: array index 4000 is past the end of the array (which contains 5 elements) [-Warray-bounds]
+        MAYALIAS(&p->out3.mid2[10].in1[10], &s.out3.mid2[4000]);
+                                             ^           ~~~~
+./struct-nested-array3.c:16:2: note: array 'mid2' declared here
+        struct InnerArrayStruct mid2[5];
+        ^
+./struct-nested-array3.c:37:12: warning: array index 20 is past the end of the array (which contains 5 elements) [-Warray-bounds]
+        MAYALIAS(&p->out3.mid2[20], &p->out3.mid2[30]);
+                  ^            ~~
+./struct-nested-array3.c:16:2: note: array 'mid2' declared here
+        struct InnerArrayStruct mid2[5];
+        ^
+./struct-nested-array3.c:37:31: warning: array index 30 is past the end of the array (which contains 5 elements) [-Warray-bounds]
+        MAYALIAS(&p->out3.mid2[20], &p->out3.mid2[30]);
+                                     ^            ~~
+./struct-nested-array3.c:16:2: note: array 'mid2' declared here
+        struct InnerArrayStruct mid2[5];
+        ^
+4 warnings generated.

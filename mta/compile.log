@@ -1,0 +1,8 @@
+#################COMPILATION LOG##############
+./tt.c:12:8: warning: incompatible pointer types assigning to 'int **' from 'void **' [-Wincompatible-pointer-types]
+    gp = &a;
+       ^ ~~
+./tt.c:21:2: warning: implicit declaration of function 'print' is invalid in C99 [-Wimplicit-function-declaration]
+        print ("%d",*gp);
+        ^
+2 warnings generated.
