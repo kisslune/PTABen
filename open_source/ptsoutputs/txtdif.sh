@@ -2,5 +2,5 @@
 
 COUNT=$1
 
-diff $1-ander-0-* $1-ander-1-*
+diff $1-nander-* $1-hander-*
 

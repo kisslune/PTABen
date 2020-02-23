@@ -12,14 +12,11 @@ FILE=$2
 FILENAME=$3
 COUNT=$4
 
-OUTPUT=$COUNT$WPATy-1-$FILENAME.txt
+OUTPUT=$COUNT$WPATy-$FILENAME.txt
 # FLAG1="$WPATy -stat=0 -fieldlimit=0"
 # FLAG2="-print-pts>&pts$WPATy-$FILENAME.txt"
 
 echo === Analyzing $FILE with $WPATy ===
-$EXEFILE $WPATy $FILE -stat=0 -print-pts >&ptsoutputs/$OUTPUT
+$EXEFILE $WPATy $FILE >&ptsoutputs/$OUTPUT
 echo $OUTPUT created.
 
-#-fieldlimit=0 -print-pts>&ptsoutputs/$OUTPUT
-
-#>&ptsoutputs/$OUTPUT

@@ -2,4 +2,4 @@
 
 COUNT=$1
 
-diff $1-nander-* $1-wander-*
+diff $1-sander-0-* $1-sander-1-*

@@ -8,6 +8,9 @@
 #  Set TestScript to indicate which analysis/optimizations you want to test with
 ################################################
 
+PTATEST=`realpath .`
+PTATESTSCRIPTS=$PTATEST/scripts
+RUNSCRIPT=$PTATEST/run.sh
 
 ######## Initialize the following key vailables before analyze ########
 WPATy=$1
